@@ -1,0 +1,16 @@
+name: My First DevOps Pipeline
+
+on: [push] 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+    
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3 
+      
+    - name: Run a simple shell command
+      run: |
+        echo "Hello DevOps! 这是我的第一次 GitHub Action 自动化触发！"
+        python --version
